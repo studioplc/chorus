@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+	<ion-side-menu-content>
+		<ion-nav-bar ng-show="$root.headerExists" id="navbar-right-top" class="page-title bar-assertive-900">
+			<ion-nav-back-button></ion-nav-back-button>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+			<ion-nav-buttons side="right">
+				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+			</ion-nav-buttons>
+		</ion-nav-bar>
+		<ion-nav-view name="fabButtonUp"></ion-nav-view>
+		<ion-nav-view animation="none" name="chorus-side_menus"></ion-nav-view>
+	</ion-side-menu-content>
+	<ion-side-menu side="left">
+		<ion-header-bar class="bar-assertive-900  ">
+			<h1 class="title"><span ng-bind-html="appName | strHTML"></span></h1>
+		</ion-header-bar>
+		<ion-content class="dark-bg stable">
+			<ion-list class="list" >
+				<ion-item  class="menu-actualites item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.actualites">
+					<i class="icon ion-alert-circled"></i> {{ "Actualités" | translate }}
+				</ion-item>
+				<ion-item  class="menu-bands item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.bands">
+					<i class="icon ion-music-note"></i> {{ "Ateliers Bands" | translate }}
+				</ion-item>
+				<ion-item  class="menu-guitare item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.guitare">
+					<i class="icon ion-ios-musical-note"></i> {{ "Guitare" | translate }}
+				</ion-item>
+				<ion-item  class="menu-chant item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.chant">
+					<i class="icon ion-mic-c"></i> {{ "Chant" | translate }}
+				</ion-item>
+				<ion-item  class="menu-theatreenfant item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.theatreenfant">
+					<i class="icon ion-chatbubbles"></i> {{ "Théâtre : enfants" | translate }}
+				</ion-item>
+				<ion-item  class="menu-theatreadulte item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.theatreadulte">
+					<i class="icon ion-chatboxes"></i> {{ "Théâtre : adultes" | translate }}
+				</ion-item>
+				<ion-item  class="menu-maths item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.maths">
+					<i class="icon ion-pie-graph"></i> {{ "Mathématiques" | translate }}
+				</ion-item>
+				<ion-item  class="menu-physiquechimie item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.physiquechimie">
+					<i class="icon ion-erlenmeyer-flask"></i> {{ "Sciences physiques / Chimie" | translate }}
+				</ion-item>
+				<ion-item  class="menu-francais item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.francais">
+					<i class="icon ion-ios-book"></i> {{ "Français" | translate }}
+				</ion-item>
+				<ion-item  class="menu-philosophie item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.philosophie">
+					<i class="icon ion-flash"></i> {{ "Philosophie" | translate }}
+				</ion-item>
+				<ion-item  class="menu-coding item-sidebar item item-icon-left text-left dark-ink" nav-clear="" menu-close="" ui-sref="chorus.coding">
+					<i class="icon ion-ios-game-controller-b"></i> {{ "Game coding" | translate }}
+				</ion-item>
+			</ion-list>
+		</ion-content>
+	</ion-side-menu>
+</ion-side-menus>
